@@ -50,8 +50,8 @@
 
 
 <script type="text/javascript">
-    let updateFrequency = 1200;
-    const defaultMinYear = 1990;
+    let updateFrequency = 1300;
+    const defaultMinYear = 1988;
     const defaultMaxYear = 2022;
     const statYears = [1988,1989,1990,1991,1992,1993,1994,1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022]
     const statRegions = ['EAP', 'SAR', 'LAC', 'AFR', 'ECA', 'MNA', 'OTH']
@@ -210,12 +210,12 @@
     new Vue({
         el: '#main',
         data: {
-            topN: 15,
+            topN: 20,
             selectedYearRange: [defaultMinYear, defaultMaxYear],
             minYear: defaultMinYear,
             maxYear: defaultMaxYear,
-            buttonText: '❚❚',
-            isRunning: true
+            buttonText: '⯈',
+            isRunning: false
         },
         components: {
             'vueSlider': window[ 'vue-slider-component' ],
@@ -315,7 +315,7 @@
                 option = {
                     title: [{
                         show: true,
-                        text: "Top 15 countries covered in PRWP, 1988-2022",
+                        text: "Top 20 countries covered in PRWP, 1988-2022",
                         textStyle: {
                             color: "#4d4d4d",
                             fontSize: "20",
@@ -325,7 +325,7 @@
                         x: "center"
                     }, {
                         show: true,
-                        text: "Cumulative country counts for IDA/IBRD countries.",
+                        text: "Cumulative country counts for IDA/IBRD countries since 1988.",
                         textStyle: {
                             color: "#4d4d4d",
                             fontSize: "12",
