@@ -16,7 +16,7 @@
 <body>
 
 <!-- layout -->
-<div id = 'main' class="container p-1 border">
+<div id = 'main' class="container p-1 border" style="width:720px;height:780px">
 
     <!-- Main filters -->
     <div class="d-flex justify-content-between mt-2 mx-2 py-2 border">
@@ -29,12 +29,12 @@
             <span>topics</span>
         </div>
         <!-- Year -->
-        <div class="col col-9 form-inline">
+        <div class="col col-8 form-inline">
             <span>Select year ({{selectedYearRange[0]}} - {{selectedYearRange[1]}})</span>
             <vue-slider class="col ml-3" v-model="selectedYearRange" :min="minYear" :max="maxYear" :lazy="false" @change="onFilterChange()"></vue-slider>
         </div>
         <!-- Button -->
-        <div class="col col-1 align-self-center">
+        <div class="flex-fill mx-3 align-self-center">
             <button class="btn btn-primary btn-sm btn-block" @click="onButtonClick()">{{buttonText}}</button>
         </div>
     </div>
@@ -260,7 +260,7 @@
                         elements: [
                             {
                                 type: 'text',
-                                right: 160,
+                                right: 100,
                                 bottom: 80,
                                 style: {
                                     text: this.selectedYearRange[0],
