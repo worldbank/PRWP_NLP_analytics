@@ -16,7 +16,7 @@
 <body>
 
 <!-- layout -->
-<div id = 'main' class="container p-1 border">
+<div id = 'main' class="container p-1 border" style="width:800px;height:800px">
 
     <!-- Main filters -->
     <div class="d-flex justify-content-between mt-2 mx-2 py-2 border">
@@ -29,7 +29,7 @@
             <span>countries</span>
         </div>
         <!-- Year -->
-        <div class="col col-9 form-inline">
+        <div class="col col-8 form-inline">
             <span>Select year ({{selectedYearRange[0]}} - {{selectedYearRange[1]}})</span>
             <vue-slider class="col ml-3" v-model="selectedYearRange" :min="minYear" :max="maxYear" :lazy="false" @change="onFilterChange()"></vue-slider>
         </div>
